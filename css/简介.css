@@ -1,0 +1,45 @@
+/* 页面基础设置 */
+body {
+    /* 背景图片自适应设置 */
+    background-image: url("../images/简介.jpg");
+    background-size: cover; /* 保持比例缩放，完全覆盖页面 */
+    background-position: center; /* 始终居中显示 */
+    background-attachment: fixed; /* 固定背景，不随滚动移动 */
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh; /* 确保背景占满整个视口高度 */
+}
+
+/* 内容容器 - 占网页60%宽度并自适应 */
+.container {
+    width: 60%; /* 固定占网页60%宽度 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 30px;
+    /* 调整容器整体上下位置 */
+    margin-top: 250px; /* 增大此值，容器整体下移 */
+    margin-bottom: 40px;
+}
+
+/* 标题样式 */
+h2 {
+    text-align: center;
+    color: #333;
+    /* 调整标题上下位置 */
+    margin-top: 10px; /* 增大此值，标题下移 */
+    margin-bottom: 25px; /* 增大此值，标题与正文间距变大 */
+}
+
+/* 段落样式 */
+p {
+    line-height: 1.8;
+    color: #444;
+    /* 调整段落之间的间距 */
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* 增大此值，段落间距变大 */
+}
+
+/* 移除最后一个段落的底部间距 */
+p:last-child {
+    margin-bottom: 0;
+}
+    

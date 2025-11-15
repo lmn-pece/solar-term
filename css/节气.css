@@ -1,0 +1,51 @@
+
+/* 总览区域容器 */
+.zonglan {
+    width: 100%;
+    position: relative;
+    max-width: 800px; /* 图片最大宽度，可根据需要调整 */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+/* 原图样式 */
+.zonglan-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 文字叠加容器：覆盖整个图片区域 */
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 叠加文字样式 */
+.overlay-text {
+    position: absolute;
+    color: #fff; /* 文字颜色（与图片背景对比明显） */
+    font-size: 20px; /* 文字大小，可根据图片调整 */
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #000; /* 文字阴影增强可读性 */
+    transition: all 0.3s ease; /*  hover动画过渡 */
+}
+
+/* 鼠标悬停效果 */
+.overlay-text:hover {
+    color: #ff9900; /* 悬停时变色 */
+    transform: scale(1.1); /* 轻微放大 */
+}
+
+/* 响应式调整：小屏幕下文字缩小 */
+@media (max-width: 600px) {
+    .overlay-text {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	
+    font-family: "Microsoft Yahei", sans-serif;
+    line-height: 1.8;
+    color: #333;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* 确保背景占满整个视口高度 */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* 半透明白色背景，增强文字可读性 */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.text-column {
+    flex: 1;
+    min-width: 300px;
+    /* 确保小屏幕上文字区域不会过窄 */
+}
+
+.image-column {
+    flex: 0 0 300px;
+    min-width: 200px;
+    /* 图片区域最小宽度 */
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* 响应式调整：小屏幕下自动改为上下布局 */
+@media (max-width: 768px) {
+    .content-row {
+        flex-direction: column;
+    }
+
+    .image-column {
+        flex: 1;
+        text-align: center;
+        /* 图片居中显示 */
+    }
+
+    .image-column img {
+        max-width: 250px;
+        /* 限制小屏幕下图片最大宽度 */
+    }
+
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+}
+
+.next-page {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.next-page a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.next-page a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.prev-page {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.prev-page a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.prev-page a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

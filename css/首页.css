@@ -1,0 +1,118 @@
+/* 初始化样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "微软雅黑", sans-serif;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+}
+
+/* 总览区域样式 - 大图展示 */
+.zonglan {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* 保证总览图有足够高度，突出显示 */
+    min-height: 800px;
+}
+
+.zonglan-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持比例并覆盖容器 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 内容区域通用样式 */
+.goods-con {
+    padding: 40px 0; /* 增加上下间距，让内容更舒展 */
+}
+
+.w1200 {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 标题样式 */
+h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 4px solid #e8420a; /* 增加标题装饰 */
+}
+
+/* 卡片容器样式 */
+.zhanshi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* 增大卡片间距 */
+}
+
+/* 单个卡片样式 - 增大图片比例 */
+.zhanshi a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23%;
+    min-width: 220px; /* 适当增大最小宽度 */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease; /* 增加hover效果 */
+}
+
+/* 增大图片显示比例 */
+.zhanshi a img {
+    width: 100%;
+    height: 200px; /* 固定图片高度，确保比例更大 */
+    object-fit: cover; /* 保持图片比例，裁剪多余部分 */
+    border-radius: 6px;
+    margin-bottom: 18px; /* 增加图片与文字间距 */
+}
+
+/* 文字样式 */
+.zhanshi a .wz {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/* 卡片hover效果 */
+.zhanshi a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 媒体查询：屏幕变窄时调整布局 */
+@media (max-width: 992px) {
+    .zhanshi a {
+        width: 45%; /* 中等屏幕显示2列 */
+    }
+}
+
+@media (max-width: 576px) {
+    .zhanshi a {
+        width: 100%; /* 小屏幕显示1列 */
+        max-width: 320px;
+    }
+    
+    .zonglan {
+        min-height: 280px; /* 移动端减小总览图高度 */
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+}

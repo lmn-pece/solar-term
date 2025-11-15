@@ -1,0 +1,126 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft Yahei", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 节气内容板块通用样式 */
+.div {
+    margin: 40px 0;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影增强层次感 */
+}
+
+.div h2 {
+    color: #0056b3;
+    border-left: 4px solid #0056b3;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.div h3 {
+    color: #333;
+    margin: 22px 0 12px;
+    font-size: 1.1rem;
+    border-bottom: 1px dotted #ddd; /* 下划线区分小标题 */
+    padding-bottom: 5px;
+}
+
+.div p {
+    margin-bottom: 15px;
+    text-indent: 2em;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* 调整：返回按钮容器（随内容定位，非固定） */
+.back-btn-container {
+    margin: 40px auto; /* 上下留间距，水平居中 */
+    width: 100%;
+    max-width: 200px; /* 限制按钮宽度，避免过宽 */
+}
+
+/* 返回按钮样式 */
+.back-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease; /* hover 过渡效果 */
+    border: none;
+    cursor: pointer;
+}
+
+/* 按钮 hover 交互效果 */
+.back-btn:hover {
+    background-color: #004085; /* 深色系 hover 变化，增强交互感 */
+    color: #fff;
+}
+
+/* 响应式调整：适配手机等小屏幕 */
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px;
+    }
+
+    .div {
+        margin: 30px 0;
+        padding: 18px;
+    }
+
+    .div h2 {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+
+    .div h3 {
+        font-size: 1rem;
+        margin: 18px 0 10px;
+    }
+
+    .div p {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+        text-indent: 1.5em; /* 小屏幕缩小首行缩进，提升阅读体验 */
+    }
+
+    /* 小屏幕按钮调整 */
+    .back-btn-container {
+        margin: 30px auto;
+        max-width: 180px;
+    }
+
+    .back-btn {
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* 超小屏幕（如手机竖屏）额外适配 */
+@media (max-width: 375px) {
+    .div p {
+        text-indent: 1.2em;
+    }
+
+    .back-btn-container {
+        max-width: 160px;
+    }
+}
